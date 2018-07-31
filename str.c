@@ -14,7 +14,7 @@ int main(){
     a = s[0];
     /*Because we have read 10 characters, there are no trailing input chars.
     Hence a higher buffer size for fgets helps if you dont want to mess up
-    next input readers.*/
+    next input readers.Fgets also reads whiteline input which scanf doesnt*/
     printf("Enter new character\n");
     char t = getchar();
     printf("%c\n%c",a,t);
