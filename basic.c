@@ -4,6 +4,7 @@ int main(){
     int a;
     char c;
     float b;
+    char* str;
     printf("Enter basic integer and float input\n");
     scanf("%d%f",&a,&b);
     printf("%d\n%f\n",a,b);
@@ -16,6 +17,9 @@ int main(){
     scanf with character to avoid any trailing whitespace and newline.
     */
     scanf(" %c",&c);
-    printf("%c",c);
+    printf("%c\n",c);
+    printf("Enter string\n");
+    scanf("%s",str);
+    printf("%s\n",str);
     return(0);
 }
