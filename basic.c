@@ -16,7 +16,11 @@ int main(){
     giving you a blank. To avoid this, use " %c" instead of "%c". This tells 
     scanf with character to avoid any trailing whitespace and newline.
     */
-    scanf(" %c",&c);
+    scanf(" %c",&c); 
     printf("%c\n",c);
+
+    /*it is still not recommended to use scanf as it can cause buffer overflow.
+    The recommended option is fgets for character and string*/
+    
     return(0);
 }
