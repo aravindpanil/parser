@@ -4,8 +4,8 @@ int main(){
     int a;
     char c;
     float b;
-    printf("Enter basic integer character and float input\n");
-    scanf("%d%c%f",&a,&c,&b);
-    printf("%d%c%f",a,c,b);
+    printf("Enter basic integer and float input\n");
+    scanf("%d%f",&a,&b);
+    printf("%d\n%f",a,b);
     return(0);
 }
