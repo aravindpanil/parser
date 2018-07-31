@@ -28,3 +28,15 @@ getchar();
 scanf("%c",&chr);
 ```
  
+ ## FGETS OVER SCANF
+  
+  fgets() is the preferred method to read input especially character and string. Integer and float takes processing after reading the input with fgets. Hence it is less convenient. The main advantage of fgets is that it won't cause a buffer overflow unlike scanf and gets(which should never be used). 
+  ```
+  char str[100];
+  fgets(str,100,stdin);
+  ```
+  The above code will ensure there are no trailing characters to mess up the input statements that follow. fgets() also deals with lines with whitespace comfortably which scanf does not. To get the character simply follow the above code with 
+  ```
+  char t = str[0];
+  ```
+  It is not recommended to use dynamic allocation for fgets as it is an expensive process. Using a sufficiently large buffer for text is good enough and simple. 
