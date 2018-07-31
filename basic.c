@@ -18,8 +18,5 @@ int main(){
     */
     scanf(" %c",&c);
     printf("%c\n",c);
-    printf("Enter string\n");
-    scanf("%s",str);
-    printf("%s\n",str);
     return(0);
 }
