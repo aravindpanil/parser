@@ -7,7 +7,8 @@ int main(){
     char* str;
     printf("Enter basic integer and float input\n");
     scanf("%d%f",&a,&b);
-    printf("%d\n%f\n",a,b);
+    printf("Integer - %d\n",a);
+    printf("%f\n",b);
     printf("Enter character\n");
 
     /*scanf for %c does not strip away whitespace characters where %d does.
