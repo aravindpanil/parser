@@ -8,7 +8,9 @@ int main(){
     scanf("%d",&e);
 
     /*Same problem appears here. newline after scanf is consumed by fgets.
-    To avoid use a getchar() to consume the newline and then use fgets.*/
+    To avoid use a getchar() to consume the newline and then use fgets.
+    Note that fgets stops taking input when it reads newline but it does
+    consume the newline*/
 
     getchar();
     printf("Enter input character\n");
