@@ -5,16 +5,16 @@ class basic {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter an integer");
-        int a = sc.nextInt();
+        int a = sc.nextInt();     
         System.out.println("The integer is "+a);
+
+         System.out.println("Enter a character");
+        String s = sc.next();
+        char c = s.charAt(0);
+        System.out.println(c);
 
         System.out.println("Enter a float number");
         float g = sc.nextFloat();
         System.out.println(g);
-        
-        System.out.println("Enter a character");
-        String s = sc.next();
-        char c = s.charAt(0);
-        System.out.println(c);
     }
 }
