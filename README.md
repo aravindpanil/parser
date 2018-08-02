@@ -43,4 +43,19 @@ scanf("%c",&chr);
  
  ## SCANNER CLASS IN JAVA
   
-  The scanner class breaks up the entire input into tokens seperated by delimiters. The default delimiter is whitespace.
+  The scanner class breaks up the entire input into tokens seperated by delimiters. The default delimiter is whitespace. **The scanner methods next() and its children work by skipping the delimiter and returning the next token. It will not consume the delimiter after the token.**
+   
+  **Note - An important feature of java is that it considers whitespace, tab, newline and EOF as delimiter for the scanner class**
+   
+   **This means that when a next() or nextInt() or nextFloat() is used, it will leave the newline after pressing enter in the input in the input stream. This can cause problems with multiple input as shown in the following code**
+    
+  ```
+  int a  = sc.nextInt();
+
+  /*Here we type an integer and press enter. The integer is consumed by nextInt but the enter or newline is left in the input stream.*/
+   
+  String s = sc.nextLine();
+  /*This will not capture any input because newline will consume the enter from previous input. Then it stops taking input*/
+
+```
+The solution is to add an extra sc.newLine() after sc.nextInt() so that it will consume the newline.
