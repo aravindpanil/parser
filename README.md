@@ -40,3 +40,7 @@ scanf("%c",&chr);
   char t = str[0];
   ```
   It is not recommended to use dynamic allocation for fgets as it is an expensive process. Using a sufficiently large buffer for text is good enough and simple. 
+ 
+ ## SCANNER CLASS IN JAVA
+  
+  The scanner class breaks up the entire input into tokens seperated by delimiters. The default delimiter is whitespace.
