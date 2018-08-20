@@ -48,6 +48,12 @@ void insert_pos(int val, int pos) {
     f->next = ptr;
 }
 
+void insert_begin(int val) {
+    Node* nd = newnode(val);
+    nd->next = head;
+    head = nd;
+}
+
 int main() {
     insert_end(3);
     insert_end(5);
@@ -55,5 +61,9 @@ int main() {
     insert_end(20);
     insert_end(30);
     insert_pos(7, 5);
+    insert_begin(100);
+    insert_begin(24);
+    insert_pos(23,4);
+    insert_end(1200);
     display();
 }
