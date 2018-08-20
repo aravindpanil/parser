@@ -117,6 +117,17 @@ int pop(){
     return(i);    
 }
 
+void reverse(){
+    Node *curr = head,*prev = NULL,*next = NULL;
+    while(curr!=NULL){
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    head = prev;
+}
+
 int main() {
     if(empty())
         printf("%s\n","Empty");
@@ -147,5 +158,7 @@ int main() {
     printf("\n%d\n",pop());
     display();
     remove_value(100);
+    display();
+    reverse();
     display();
 }
