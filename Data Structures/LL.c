@@ -54,6 +54,21 @@ void display() {
     }
 }
 
+int front(){
+    return(head->item);
+}
+
+int back(){
+    return(tail->item);
+}
+
+int size(){
+    int size = 0;
+    Node* ptr = head;
+    for(;ptr!=NULL;ptr = ptr->next) size++;
+    return(size);
+}
+
 int main() {
     insert_end(3);
     insert_end(5);
@@ -66,4 +81,5 @@ int main() {
     insert_pos(23,4);
     insert_end(1200);
     display();
+    printf("%d %d %d\n",front(),back(),size());
 }
