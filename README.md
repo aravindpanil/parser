@@ -78,3 +78,30 @@ while(token){
   token = strtok(NULL,delim);
 }
 ```
+## Linked List
+
+**size()** - O(n)
+ 
+**empty()** - O(1)
+ 
+**get(int pos)** - O(n)  *(Arrays have O(1))*
+ 
+**pop()** - O(1) *requires list traversal*
+ 
+**front()** - O(1)
+ 
+**back()** - O(1) *requires list traversal*
+ 
+**insert_pos(int val,int pos)** - O(1) *requires list traversal.Arrays have O(n)*
+ 
+**insert_end(int val)** - O(1)
+ 
+**insert_begin(int val)** - O(1) *Arrays have O(n)*
+ 
+**display()** - O(n)
+ 
+**remove_index(int pos)** - O(1) *Arrays have O(n)*
+ 
+**remove_value(int val)** - O(n) 
+ 
+**reverse()** - O(n)
