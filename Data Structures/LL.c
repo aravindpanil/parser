@@ -49,6 +49,7 @@ void insert_begin(int val) {
 
 void display() {
     Node* ptr;
+    printf("%s\n", "List is");
     for (ptr = head; ptr != NULL; ptr = ptr->next) {
         printf("%d\n", ptr->item);
     }
@@ -81,9 +82,39 @@ int get(int pos){
     return(ptr->item); 
 }
 
-int pop_front(){
-    int val = head->item;
-    
+int remove_index(int pos){
+    Node* f = head;
+    Node* temp;
+    int i;
+    for(i = 1;i < pos;i++){
+        f = f->next;
+    }
+    temp = f->next;
+    f->next = temp->next;
+    free(temp);
+}
+
+int remove_value(int val){
+    Node* f = head;
+    Node* temp;
+    while(f->next->item != val && f!=NULL){
+        f = f->next;
+    }
+    temp = f->next;
+    f->next = temp->next;
+    free(temp);
+}
+
+int pop(){
+    Node* f;
+    Node* temp;
+    for(f = head;(f->next)!=tail;f = f->next);
+    temp = f->next;
+    int i = temp->item;
+    tail = f;
+    free(temp);
+    tail->next = NULL;
+    return(i);    
 }
 
 int main() {
@@ -108,4 +139,13 @@ int main() {
     display();
     printf("%d %d %d\n",front(),back(),size());
     printf("%d",get(6));
+    printf("%s\n","List before removal");
+    display();
+    remove_index(3);
+    printf("%s\n","List after removal");
+    display();
+    printf("\n%d\n",pop());
+    display();
+    remove_value(100);
+    display();
 }
