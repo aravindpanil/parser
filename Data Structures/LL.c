@@ -33,13 +33,6 @@ void insert_end(int val) {
     }
 }
 
-void display() {
-    Node* ptr;
-    for (ptr = head; ptr != NULL; ptr = ptr->next) {
-        printf("%d\n", ptr->item);
-    }
-}
-
 void insert_pos(int val, int pos) {
     Node* ptr = newnode(val);
     Node* f = head;
@@ -52,6 +45,13 @@ void insert_begin(int val) {
     Node* nd = newnode(val);
     nd->next = head;
     head = nd;
+}
+
+void display() {
+    Node* ptr;
+    for (ptr = head; ptr != NULL; ptr = ptr->next) {
+        printf("%d\n", ptr->item);
+    }
 }
 
 int main() {
