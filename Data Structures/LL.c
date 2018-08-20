@@ -69,11 +69,36 @@ int size(){
     return(size);
 }
 
+int empty(){
+    if(head)
+        return 0;
+    return 1;
+}
+
+int get(int pos){
+    Node* ptr = head;
+    for(int i = 0;i < pos;i++) ptr = ptr->next;
+    return(ptr->item); 
+}
+
+int pop_front(){
+    int val = head->item;
+    
+}
+
 int main() {
+    if(empty())
+        printf("%s\n","Empty");
+    else
+        printf("%s\n","Not Empty");
     insert_end(3);
     insert_end(5);
     insert_end(10);
     insert_end(20);
+    if(empty())
+        printf("%s\n","empty");
+    else
+        printf("%s\n","Not Empty");
     insert_end(30);
     insert_pos(7, 5);
     insert_begin(100);
@@ -82,4 +107,5 @@ int main() {
     insert_end(1200);
     display();
     printf("%d %d %d\n",front(),back(),size());
+    printf("%d",get(6));
 }
